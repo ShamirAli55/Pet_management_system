@@ -1,0 +1,71 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <!-- <meta charset="UTF-8"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pet Management - Dog Viewer</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 30px;
+      background-color: #f0f8ff;
+    }
+    h1 {
+      color: #333;
+    }
+    img {
+      width: 300px;
+      height: auto;
+      border-radius: 10px;
+      margin: 20px 0;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #008cba;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #006f99;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🐾 Random Dog Viewer</h1>
+  <div id="dog-container">
+    <p>Loading...</p>
+  </div>
+  <button onclick="loadDog()">Get Another Dog</button>
+
+  <script>
+    const container = document.getElementById("dog-container");
+
+function loadDog() {
+  container.innerHTML = "<p>Loading...</p>";
+
+  fetch("https://api.thedogapi.com/v1/images/search")
+    .then(response => response.json())
+    .then(data => {
+      const dog = data[0];
+      container.innerHTML = `
+        <img src="${dog.url}" alt="A cute dog" />
+        <p>Dog ID: ${dog.id}</p>
+      `;
+    })
+    .catch(error => {
+      container.innerHTML = "<p>Failed to load dog data.</p>";
+      console.error("Error:", error);
+    });
+}
+
+loadDog();
+  </script>
+</body>
+</html>

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pet Management System</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+  <link rel="stylesheet" href="./Style/index.css" />
+</head>
+
+<body>
+  <div class="header_container">
+    <div class="header">
+      <div class="name">PetSphere</div>
+
+      <nav id="nav_bar">
+        <a href="home.php">Home</a>
+        <a href="about.html">About</a>
+        <a href="#Gallery">Gallery</a>
+        <a href="contact.php">Contact Us</a>
+      </nav>
+
+      <div class="header-right">
+        <button class="search">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input type="button" value="Search" />
+        </button>
+        <button class="auth-btn" onclick="window.location.href='login.php'">Login</button>
+        <button class="auth-btn" onclick="window.location.href='sign_up.php'">Sign Up</button>
+
+        <!-- MENU TOGGLE on right side -->
+        <div class="menu-toggle" id="menu-toggle">
+          <i class="fa fa-bars"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--   body container start here -->
+  <div class="body_container">
+    <div class="main">
+      <div class="image_container">
+
+        <!-- Slide 1 -->
+        <div class="slide" id="slide1">
+          <img src="./Images/image1.jpg" alt="Pet 1">
+          <div class="img_detail">
+            <div class="text_content">
+              <h2>Pet Management System</h2>
+              <p class="pet_stat">Make Your Pets Happy</p>
+              <p class="detail">Our Pet Management System offers pet care, grooming, training,
+                adoption, veterinary support, products, and customer service for pet lovers.
+              </p>
+              <div class="button_group">
+                <button class="btn" onclick="window.location.href='about.html'">Learn More</button>
+                <button class="btn">Register Pet</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="slide" id="slide2">
+          <img src="./Images/image2.jpg" alt="Pet 2">
+          <div class="img_detail">
+            <div class="text_content">
+              <h2>Pet Management System</h2>
+              <p class="pet_stat">Make Your Pets Happy</p>
+              <p class="detail">All-in-one solution for tracking pet care, medical records, and appointments.</p>
+              <div class="button_group">
+                <button class="btn">Explore</button>
+                <button class="btn" onclick="window.location.href='login.php'">Login</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="slide" id="slide3">
+          <img src="./Images/image3.jpg" alt="Pet 3">
+          <div class="img_detail">
+            <div class="text_content">
+              <h2>Pet Management System</h2>
+              <p class="pet_stat">Make Your Pets Happy</p>
+              <p class="detail">Efficient and responsive interface to support your pet needs.</p>
+              <div class="button_group">
+                <button class="btn">Services</button>
+                <button class="btn" onclick="window.location.href='contact.php'">Contact Us</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="slider_nav">
+        <a href="#slide1"></a>
+        <a href="#slide2"></a>
+        <a href="#slide3"></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- categories section is started here -->
+  <div class="categories">
+    <div class="allanimal">
+      <p class="paracate">TRENDING CATEGORIES</p>
+      <h2 class="headcate">WE BELIEVE EVERY PET DESERVES THE BEST </h2>
+      <div class="img_cont">
+        <div class="animal_card">
+          <img src="./Images/cat-removebg-preview.png" alt="Cat Image">
+          <p class="animal_name">Cats</p>
+        </div>
+        <div class="animal_card">
+          <img src="./Images/dog-removebg-preview.png" alt="Dog Image">
+          <p class="animal_name">Dogs</p>
+        </div>
+        <div class="animal_card">
+          <img src="./Images/parrot-removebg-preview.png" alt="Parrot Image">
+          <p class="animal_name">Parrot</p>
+        </div>
+        <div class="animal_card">
+          <img src="./Images/rabbit-removebg-preview.png" alt="Rabbit Image">
+          <p class="animal_name">Rabbits</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const toggle = document.getElementById('menu-toggle');
+    const nav = document.getElementById('nav_bar');
+
+    toggle.addEventListener('click', () => {
+      nav.classList.toggle('show');
+    });
+
+    const navLinks = nav.querySelectorAll('a');
+    navLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        nav.classList.remove('show');
+      });
+    });
+  </script>
+
+</body>
+</html>

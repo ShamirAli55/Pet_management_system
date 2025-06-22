@@ -1,0 +1,160 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #fefefe;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+h2 {
+    text-align: center;
+    margin: 30px 0 10px;
+    font-size: 2rem;
+    color: #444;
+}
+
+.cart-table-container {
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto;
+    overflow-x: auto;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    background: #fff;
+    border-radius: 12px;
+    padding: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 14px 16px;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+}
+
+th {
+    background-color: rgb(54, 52, 52);
+    color: white;
+    font-weight: 600;
+}
+
+td {
+    vertical-align: middle;
+}
+
+/* ✅ Quantity + Arrow alignment fix */
+.cart-item-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+}
+
+.cart-item-wrapper a,
+.quantity-value {
+    font-size: 16px;
+    height: 36px;
+    min-width: 36px;
+    padding: 0 10px;
+    border-radius: 6px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+.cart-item-wrapper a {
+    background-color: #e6f0fa;
+    color: #0077cc;
+    text-decoration: none;
+    transition: background 0.2s, transform 0.2s;
+}
+
+.cart-item-wrapper a:hover {
+    background-color: #cce4f7;
+    transform: scale(1.05);
+}
+
+.cart-item-wrapper a:active {
+    background-color: #aad4f5;
+}
+
+.quantity-value {
+    background-color: #f0f4f8;
+    color: #000;
+    font-weight: 600;
+}
+
+/* Total Price Section */
+.total-price {
+    text-align: center;
+    font-size: 1.5rem;
+    margin: 30px 0 10px;
+    font-weight: 600;
+    color: #222;
+}
+
+/* Checkout Button */
+button {
+    display: block;
+    margin: 30px auto 40px;
+    padding: 12px 24px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+}
+
+button:hover {
+    background-color: #218838;
+    transform: translateY(-2px);
+}
+
+button:active {
+    background-color: #1e7e34;
+    transform: scale(0.98);
+}
+
+/* Optional: Striped table rows */
+table tr:nth-child(even) td {
+    background-color: #fafafa;
+}
+
+/* Optional: for cart icon alignment */
+.cart-icon-wrapper {
+    position: relative;
+    display: inline-block;
+    margin-left: 30px;
+}
+th:nth-child(2),:nth-child(3),:nth-child(4) {
+    text-align: center;
+}
+/* Style for the "Remove" action link */
+td:last-child a {
+    display: inline-block;
+    padding: 6px 12px;
+    background-color: #ff4d4d;
+    color: #fff;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+td:last-child a:hover {
+    background-color: #e60000;
+    transform: scale(1.05);
+}
+
+td:last-child a:active {
+    background-color: #cc0000;
+    transform: scale(0.97);
+}

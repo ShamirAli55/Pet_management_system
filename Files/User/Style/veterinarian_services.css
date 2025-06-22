@@ -1,0 +1,239 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+:root {
+    --header: rgb(54, 52, 52);
+    --primary: #0077cc;
+    --hover: #005fa3;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f4f4;
+    line-height: 1.6;
+}
+
+.header_container {
+    width: 100%;
+    background-color: var(--header);
+    border-radius: 0.4rem;
+    padding: 0 2rem;
+    margin-bottom: 2rem;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px 0;
+    flex-wrap: wrap;
+}
+
+.left-group {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 22px;
+    color: white !important;
+    cursor: pointer;
+    background-color: #333;
+}
+
+.name {
+    color: white;
+    font-size: 1.6rem;
+    font-weight: bold;
+}
+
+#nav_bar {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+#nav_bar a {
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    transition: color 0.3s;
+    padding: 8px 0;
+}
+
+#nav_bar a:hover {
+    color: var(--primary);
+}
+
+.header-right {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.auth-btn, .butns {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 16px;
+}
+
+.auth-btn:hover, .butns:hover {
+    background-color: #555;
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  #nav_bar {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: var(--header);
+    padding: 10px 0;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    z-index: 100;
+  }
+
+  #nav_bar.show {
+    display: flex !important; 
+    background-color: var(--header);
+  }
+}
+.container {
+    max-width: 1000px;
+    margin: auto;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.search-bar {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.search-bar input[type="text"] {
+    padding: 10px;
+    width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.search-bar button {
+    background-color: var(--primary);
+    color: white;
+    padding: 10px 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 8px;
+}
+
+.card {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    background-color: #fafafa;
+}
+
+.card h3 {
+    margin-top: 0;
+}
+
+.card img {
+    width: 180px;
+    height: 120px;
+    object-fit: cover;
+    margin-left: 20px;
+    border-radius: 8px;
+}
+
+/* ========== FORMS ========== */
+
+form label {
+    display: block;
+    margin-top: 10px;
+}
+
+form input,
+form select,
+form textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-top: 5px;
+    resize: vertical;
+}
+
+form button {
+    background: #3498db;
+    color: white;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 5px;
+    margin-top: 15px;
+    cursor: pointer;
+}
+
+/* ========== INFO MESSAGE ========== */
+
+.info-message {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+.cart-button-wrapper {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .auth-btn {
+    position: relative;
+    font-size: 20px;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .cart-badge {
+    position: absolute;
+    top: -6px;
+    right: -6px;
+    background-color: red;
+    color: white;
+    font-size: 12px;
+    padding: 2px 6px;
+    border-radius: 50%;
+    font-weight: bold;
+    line-height: 1;
+  }
+  
